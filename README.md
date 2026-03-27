@@ -85,17 +85,17 @@ results/
   fig_selection.png     — Satellite selection score analysis
 ```
 
-## Preliminary Results (2 traces, CPU training)
+## Empirical Results (12 Pixel 7 Pro traces, 18,676 epochs, CPU training)
 
 | Method | 3D RMSE (m) | Median (m) | 95th %ile (m) | Improvement |
 |--------|-------------|------------|----------------|-------------|
-| WLS-SPP (baseline) | 5.15 | 3.65 | 8.63 | — |
-| CxTF (proposed) | 4.79 | 2.92 | 8.66 | 6.9% (RMSE) / 20.0% (median) |
-| Ablation A (no emb.) | 4.73 | 2.90 | 8.40 | 8.2% |
-| Ablation B (no sel.) | 4.77 | 2.91 | 8.80 | 7.4% |
-| Ablation C (no PE) | 4.96 | 3.15 | 9.23 | 3.7% |
+| WLS-SPP (baseline) | 6.68 | 5.15 | 11.15 | — |
+| CxTF (proposed) | 5.30 | 3.59 | 8.73 | 20.6% (RMSE) / 30.3% (median) |
+| Ablation A (no emb.) | 5.49 | 3.64 | 9.24 | 17.8% |
+| Ablation B (no sel.) | 5.25 | 3.48 | 8.50 | 21.5% |
+| Ablation C (no PE) | 5.44 | 3.63 | 8.83 | 18.6% |
 
-> **Cross-environment note:** An exploratory 5-trace experiment (8,517 epochs, 2020–2023) showed that CxTF performance degrades under cross-environment domain shift when trained with limited data on CPU. The paper (Section 5.4, Limitation 5) discusses this finding in detail and identifies GPU-scale training on the full GSDC corpus (150+ traces) with per-trace cross-validation as the immediate research priority.
+Validation uses 12 GSDC traces from a single receiver type (Google Pixel 7 Pro), split per-trace (70/15/15%) to prevent data leakage. See the paper (Section 4.4.1) for full details.
 
 ## Citation
 

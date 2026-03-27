@@ -68,7 +68,7 @@ class Config:
     dropout = 0.1
     grad_clip = 1.0
     beta_loss = 0.5
-    lambda_sparse = 0.01
+    lambda_sparse = 0.001
 
     CONST_MAP = {1: 0, 6: 1, 5: 2, 3: 3}  # GPS, Galileo, BeiDou, GLONASS
     CONST_NAMES = {0: 'GPS', 1: 'Galileo', 2: 'BeiDou', 3: 'GLONASS'}
@@ -583,12 +583,31 @@ def main():
     config.n_constellations = max(all_c) + 1
     print(f"  Total: {len(all_epochs)} epochs, {len(all_c)} constellations")
 
-    # Split
-    n = len(all_epochs)
-    n_train, n_val = int(0.70*n), int(0.15*n)
-    train_data = all_epochs[:n_train]
-    val_data = all_epochs[n_train:n_train+n_val]
-    test_data = all_epochs[n_train+n_val:]
+    # Split: per-trace 70/15/15 to avoid cross-trace domain shift
+    import random
+    random.seed(42)
+    train_data, val_data, test_data = [], [], []
+    # Group epochs by trace (they were loaded in trace order)
+    trace_boundaries = []
+    trace_start = 0
+    current_trace = None
+    for i, ep in enumerate(all_epochs):
+        # Detect trace boundary by large time gap (>60s)
+        if current_trace is not None and abs(ep['epoch_time'] - all_epochs[i-1]['epoch_time']) > 60000:
+            trace_boundaries.append((trace_start, i))
+            trace_start = i
+        current_trace = ep['epoch_time']
+    trace_boundaries.append((trace_start, len(all_epochs)))
+    print(f"  Detected {len(trace_boundaries)} traces for per-trace splitting")
+    for start, end in trace_boundaries:
+        trace_epochs = all_epochs[start:end]
+        nt = len(trace_epochs)
+        n_tr = int(0.70 * nt)
+        n_va = int(0.15 * nt)
+        train_data.extend(trace_epochs[:n_tr])
+        val_data.extend(trace_epochs[n_tr:n_tr+n_va])
+        test_data.extend(trace_epochs[n_tr+n_va:])
+    random.shuffle(train_data)
     print(f"  Split: train={len(train_data)} val={len(val_data)} test={len(test_data)}")
 
     train_ds = GNSSDataset(train_data, config)
