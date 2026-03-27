@@ -40,19 +40,20 @@ pip install torch pandas numpy scikit-learn matplotlib
 
 ## Data
 
-This implementation uses the [Google Smartphone Decimeter Challenge (GSDC) 2023–2024](https://www.kaggle.com/competitions/smartphone-decimeter-2023/data) dataset. Download from Kaggle and organize as:
+This implementation uses the [Google Smartphone Decimeter Challenge (GSDC) 2023–2024](https://www.kaggle.com/competitions/smartphone-decimeter-2023/data) dataset. Download Pixel 7 Pro traces from Kaggle and organize as:
 
 ```
 data/
-  2020-06-25-00-34/
+  2023-05-09-21-32/
     device_gnss.csv
     ground_truth.csv
-  2021-01-04-21-50/
+  2023-05-16-19-55/
     device_gnss.csv
     ground_truth.csv
+  ...
 ```
 
-Each trace folder should contain `device_gnss.csv` (raw GNSS measurements) and `ground_truth.csv` (NovAtel SPAN reference positions).
+The published results use 12 Pixel 7 Pro traces (7 from May 2023, 5 from September 2023). Each trace folder needs only `device_gnss.csv` (raw GNSS measurements) and `ground_truth.csv` (NovAtel SPAN reference positions). The script auto-discovers all trace folders under `data/`.
 
 ## Usage
 
