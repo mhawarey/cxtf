@@ -74,6 +74,13 @@ The script will:
 5. Run interpretability analysis (embedding geometry, selection patterns)
 6. Generate publication figures and save results
 
+## Supplementary Experiment
+
+`cxtf_supplementary.py` runs the additional baselines (T-SPP, WLS random-walk ISB) and statistical significance tests (Wilcoxon signed-rank, Cohen's d) reported in Tables 5–6 of the paper. It loads the trained CxTF checkpoint from the main experiment:
+```bash
+python cxtf_supplementary.py --data_dir ./data --output_dir ./results
+```
+
 ## Output
 
 ```
