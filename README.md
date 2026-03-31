@@ -20,7 +20,7 @@ CxTF is a transformer-based architecture for multi-constellation GNSS single-poi
 - Sigmoid-gated satellite selection with sparsity regularization
 - Position correction MLP outputting Δr ∈ ℝ³
 
-Default configuration: d_model=128, L=4, H=8, ~1.6M parameters.
+Default configuration: d_model=128, L=4, H=8, ~800K parameters.
 
 ## Requirements
 
