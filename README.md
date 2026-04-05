@@ -2,7 +2,8 @@
 
 Reference implementation for the paper:
 
-> **Hawarey, M. (2026).** A Constellation-Aware Transformer Architecture for Multi-GNSS Positioning: Learned Inter-System Bias Estimation and Attention-Based Satellite Selection. *AIR Journal of Engineering and Technology*, Vol. 2026. (this section will be updated once paper is published)
+> **Hawarey, M. (2026).** A Constellation-Aware Transformer Architecture for Multi-GNSS Positioning: Learned Inter-System Bias Estimation and Attention-Based Satellite Selection. *AIR Journal of Engineering and Technology*, Vol. 2026, AIRJET2026613.
+> https://doi.org/10.65737/AIRJET2026613
 
 ## Overview
 
@@ -114,8 +115,7 @@ Validation uses 12 GSDC traces from a single receiver type (Google Pixel 7 Pro),
   journal={AIR Journal of Engineering and Technology},
   volume={2026},
   year={2026},
-  doi={10.65737/AIRJET2026XXX} (this section will be updated once paper is published)
-}
+  doi={10.65737/AIRJET2026613} }
 ```
 
 ## License
@@ -124,4 +124,4 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ## Author
 
-**Mosab Hawarey** — [Geospatial Research](https://geospatial.ch) (https://hawarey.org/mosab)
+**Mosab Hawarey** — [Geospatial Research] (https://geospatial.ch) (https://hawarey.org/mosab)
