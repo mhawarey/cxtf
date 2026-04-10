@@ -118,10 +118,18 @@ Validation uses 12 GSDC traces from a single receiver type (Google Pixel 7 Pro),
   doi={10.65737/AIRJET2026613} }
 ```
 
+## Author
+
+**Dr. Mosab Hawarey**
+PhD, Geodetic & Photogrammetric Engineering (ITU) | MSc, Geomatics (Purdue) | MBA (Wales) | BSc, MSc (METU)
+
+- GitHub: https://github.com/mhawarey
+- Personal: https://hawarey.org/mosab
+- ORCID: https://orcid.org/0000-0001-7846-951X
+
 ## License
 
 MIT License. See [LICENSE](LICENSE) for details.
 
-## Author
 
-**Mosab Hawarey** — [Geospatial Research] (https://geospatial.ch) (https://hawarey.org/mosab)
+
