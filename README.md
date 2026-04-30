@@ -1,9 +1,29 @@
 # CxTF: Constellation-Aware Transformer for Multi-GNSS Positioning
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Reference implementation for the paper:
 
 > **Hawarey, M. (2026).** A Constellation-Aware Transformer Architecture for Multi-GNSS Positioning: Learned Inter-System Bias Estimation and Attention-Based Satellite Selection. *AIR Journal of Engineering and Technology*, Vol. 2026, AIRJET2026613.
 > https://doi.org/10.65737/AIRJET2026613
+>
+> Mosab Hawarey
+>
+> *AIR Journal of Engineering and Technology*, Vol. 2026
+>
+> Journal DOI: 10.65737/AIRJET
+>
+> Publisher: Artificial Intelligence Review AIR Publishing House LLC
+>
+> Article ID: AIRJET2026613
+> 
+> Article DOI: https://doi.org/10.65737/AIRJET2026613
+
+## Original Paper
+
+https://doi.org/10.65737/AIRJET2026613
+>
+https://airjournals.org/doi/10.65737.AIRJET2026613.html
 
 ## Overview
 
@@ -106,21 +126,10 @@ results/
 
 Validation uses 12 GSDC traces from a single receiver type (Google Pixel 7 Pro), split per-trace (70/15/15%) to prevent data leakage. See the paper (Section 4.4.1) for full details.
 
-## Citation
-
-```bibtex
-@article{hawarey2026cxtf,
-  title={A Constellation-Aware Transformer Architecture for Multi-GNSS Positioning: Learned Inter-System Bias Estimation and Attention-Based Satellite Selection},
-  author={Hawarey, Mosab},
-  journal={AIR Journal of Engineering and Technology},
-  volume={2026},
-  year={2026},
-  doi={10.65737/AIRJET2026613} }
-```
-
 ## Author
 
 **Dr. Mosab Hawarey**
+>
 PhD, Geodetic & Photogrammetric Engineering (ITU) | MSc, Geomatics (Purdue) | MBA (Wales) | BSc, MSc (METU)
 
 - GitHub: https://github.com/mhawarey
@@ -129,7 +138,7 @@ PhD, Geodetic & Photogrammetric Engineering (ITU) | MSc, Geomatics (Purdue) | MB
 
 ## License
 
-MIT License. See [LICENSE](LICENSE) for details.
+MIT License.
 
 
 
