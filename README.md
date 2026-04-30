@@ -20,9 +20,11 @@
 
 ## Original Paper
 
-https://doi.org/10.65737/AIRJET2026613
 >
 https://airjournals.org/doi/10.65737.AIRJET2026613.html
+>
+>Reference implementation for the paper: **Hawarey, M. (2026).** A Constellation-Aware Transformer Architecture for Multi-GNSS Positioning: Learned Inter-System Bias Estimation and Attention-Based Satellite Selection. *AIR Journal of Engineering and Technology*, Vol. 2026, AIRJET2026613. https://doi.org/10.65737/AIRJET2026613
+>
 
 ## Overview
 
